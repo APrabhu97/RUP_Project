@@ -5,17 +5,19 @@
  */
 package rup;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author mahe
  */
-public class RUP {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class LabelImage {
+    public
+    static Icon src;
+    Icon getIconImage(){
+        return src;
     }
-    
+    void setIconImage(Icon sr){
+        src=sr;
+    }
 }

@@ -6,6 +6,7 @@
 package rup;
 
 import java.awt.Image;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 
@@ -13,6 +14,7 @@ import javax.swing.ImageIcon;
  *
  * @author mahe
  */
+
 public class mainForm extends javax.swing.JFrame {
 
     /**
@@ -58,6 +60,78 @@ public class mainForm extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Search");
+
+        lb1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb1MouseClicked(evt);
+            }
+        });
+
+        lb2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb2MouseClicked(evt);
+            }
+        });
+
+        lb3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb3MouseClicked(evt);
+            }
+        });
+
+        lb4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb4MouseClicked(evt);
+            }
+        });
+
+        lb5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb5MouseClicked(evt);
+            }
+        });
+
+        lb6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb6MouseClicked(evt);
+            }
+        });
+
+        lb7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb7MouseClicked(evt);
+            }
+        });
+
+        lb8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb8MouseClicked(evt);
+            }
+        });
+
+        lb9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb9MouseClicked(evt);
+            }
+        });
+
+        lb10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb10MouseClicked(evt);
+            }
+        });
+
+        lb11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb11MouseClicked(evt);
+            }
+        });
+
+        lb12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb12MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,6 +217,90 @@ public class mainForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formWindowActivated
 
+    private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
+        Icon src = lb1.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb1MouseClicked
+
+    private void lb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb2MouseClicked
+        Icon src = lb2.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb2MouseClicked
+
+    private void lb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb3MouseClicked
+        Icon src = lb3.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb3MouseClicked
+
+    private void lb4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb4MouseClicked
+        Icon src = lb4.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb4MouseClicked
+
+    private void lb5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb5MouseClicked
+        Icon src = lb5.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb5MouseClicked
+
+    private void lb6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb6MouseClicked
+        Icon src = lb6.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb6MouseClicked
+
+    private void lb7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb7MouseClicked
+        Icon src = lb7.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb7MouseClicked
+
+    private void lb8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb8MouseClicked
+        Icon src = lb8.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb8MouseClicked
+
+    private void lb9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb9MouseClicked
+        Icon src = lb9.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb9MouseClicked
+
+    private void lb10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb10MouseClicked
+        Icon src = lb10.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb10MouseClicked
+
+    private void lb11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb11MouseClicked
+        Icon src = lb11.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb11MouseClicked
+
+    private void lb12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb12MouseClicked
+        Icon src = lb12.getIcon();
+        LabelImage.src=src;
+        new personalpage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lb12MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -195,3 +353,4 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JTextField tf1;
     // End of variables declaration//GEN-END:variables
 }
+

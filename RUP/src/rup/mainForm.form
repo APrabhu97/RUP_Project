@@ -111,28 +111,64 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lb1">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb1MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb2">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb2MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb3">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb3MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb4">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb4MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb5">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb5MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb6">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb6MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb7">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb7MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb8">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb8MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb9">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb9MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb10">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb10MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb11">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb11MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lb12">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lb12MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
