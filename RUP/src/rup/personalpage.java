@@ -65,6 +65,7 @@ public class personalpage extends javax.swing.JFrame {
         jCheckBox5 = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
         jCheckBox6 = new javax.swing.JCheckBox();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,6 +108,8 @@ public class personalpage extends javax.swing.JFrame {
         jLabel7.setText("SHORT DESCRIPTION");
 
         jCheckBox6.setText("NOT NOW");
+
+        jButton3.setText("ADD TO WATCHLIST");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,7 +158,7 @@ public class personalpage extends javax.swing.JFrame {
                                 .addComponent(jRadioButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jRadioButton5)))
-                        .addGap(0, 16, Short.MAX_VALUE))))
+                        .addGap(0, 229, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,6 +207,8 @@ public class personalpage extends javax.swing.JFrame {
                             .addComponent(jButton1)
                             .addComponent(jCheckBox4)
                             .addComponent(jCheckBox2))))
+                .addGap(25, 25, 25)
+                .addComponent(jButton3)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -271,7 +276,8 @@ public class personalpage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -316,6 +322,7 @@ public class personalpage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
