@@ -5,6 +5,10 @@
  */
 package rup;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author mahe
@@ -38,28 +42,22 @@ public class mainForm extends javax.swing.JFrame {
         lb7 = new javax.swing.JLabel();
         lb8 = new javax.swing.JLabel();
         lb9 = new javax.swing.JLabel();
+        lb10 = new javax.swing.JLabel();
+        lb11 = new javax.swing.JLabel();
+        lb12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Search");
-
-        lb1.setText("jLabel1");
-
-        lb2.setText("jLabel1");
-
-        lb3.setText("jLabel1");
-
-        lb4.setText("jLabel1");
-
-        lb5.setText("jLabel1");
-
-        lb6.setText("jLabel1");
-
-        lb7.setText("jLabel1");
-
-        lb8.setText("jLabel1");
-
-        lb9.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,31 +68,29 @@ public class mainForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(tf1, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addGap(38, 38, 38)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lb5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lb5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lb9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lb2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lb6, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lb6, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lb10, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lb3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lb7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lb7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lb11, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lb12, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lb8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lb4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(546, Short.MAX_VALUE)
-                    .addComponent(lb9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(110, 110, 110)))
+                            .addComponent(lb4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,16 +111,37 @@ public class mainForm extends javax.swing.JFrame {
                     .addComponent(lb6, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb7, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb8, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(95, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(330, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lb9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(85, 85, 85)))
+                    .addComponent(lb10, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb11, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb12, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+      lb1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg").getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
+       lb2.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb2.jpg").getImage().getScaledInstance(lb2.getWidth(), lb2.getHeight(), Image.SCALE_SMOOTH)));
+       lb3.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb3.jpg").getImage().getScaledInstance(lb3.getWidth(), lb3.getHeight(), Image.SCALE_SMOOTH)));
+       lb4.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb4.jpg").getImage().getScaledInstance(lb4.getWidth(), lb4.getHeight(), Image.SCALE_SMOOTH)));
+       lb5.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb5.jpg").getImage().getScaledInstance(lb5.getWidth(), lb5.getHeight(), Image.SCALE_SMOOTH)));
+       lb6.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb6.jpg").getImage().getScaledInstance(lb6.getWidth(), lb6.getHeight(), Image.SCALE_SMOOTH)));
+       lb7.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb7.jpg").getImage().getScaledInstance(lb7.getWidth(), lb7.getHeight(), Image.SCALE_SMOOTH)));
+       lb8.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb8.jpg").getImage().getScaledInstance(lb8.getWidth(), lb8.getHeight(), Image.SCALE_SMOOTH)));
+       lb9.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb9.jpg").getImage().getScaledInstance(lb9.getWidth(), lb9.getHeight(), Image.SCALE_SMOOTH)));
+       lb10.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb10.jpg").getImage().getScaledInstance(lb10.getWidth(), lb10.getHeight(), Image.SCALE_SMOOTH)));
+       lb11.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb11.jpg").getImage().getScaledInstance(lb11.getWidth(), lb11.getHeight(), Image.SCALE_SMOOTH)));
+       lb12.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb12.jpg").getImage().getScaledInstance(lb12.getWidth(), lb12.getHeight(), Image.SCALE_SMOOTH)));
+    }//GEN-LAST:event_formWindowOpened
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+//        lb1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg")).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
+
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -164,6 +181,9 @@ public class mainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb10;
+    private javax.swing.JLabel lb11;
+    private javax.swing.JLabel lb12;
     private javax.swing.JLabel lb2;
     private javax.swing.JLabel lb3;
     private javax.swing.JLabel lb4;
