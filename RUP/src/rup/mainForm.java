@@ -198,7 +198,8 @@ public class mainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-      lb1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg").getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
+      setExtendedState(this.MAXIMIZED_BOTH);
+        lb1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg").getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
        lb2.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb2.jpg").getImage().getScaledInstance(lb2.getWidth(), lb2.getHeight(), Image.SCALE_SMOOTH)));
        lb3.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb3.jpg").getImage().getScaledInstance(lb3.getWidth(), lb3.getHeight(), Image.SCALE_SMOOTH)));
        lb4.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb4.jpg").getImage().getScaledInstance(lb4.getWidth(), lb4.getHeight(), Image.SCALE_SMOOTH)));
