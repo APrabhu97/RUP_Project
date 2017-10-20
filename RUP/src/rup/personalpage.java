@@ -33,7 +33,10 @@ public class personalpage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField3 = new javax.swing.JTextField();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        desp = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -43,12 +46,12 @@ public class personalpage extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
         jLabel10 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        rb1 = new javax.swing.JRadioButton();
+        rb2 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
+        rb3 = new javax.swing.JRadioButton();
+        rb4 = new javax.swing.JRadioButton();
+        rb5 = new javax.swing.JRadioButton();
         lb1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -69,6 +72,12 @@ public class personalpage extends javax.swing.JFrame {
             }
         });
 
+        desp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                despActionPerformed(evt);
+            }
+        });
+
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel12.setText("BOOK THE TICKETS");
 
@@ -78,26 +87,60 @@ public class personalpage extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setText("GO");
 
+        buttonGroup1.add(jCheckBox1);
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox1.setText("YES");
 
+        buttonGroup1.add(jCheckBox2);
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox2.setText("NO");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("WANT TO RATE THIS MOVIE");
 
+        buttonGroup2.add(jCheckBox3);
         jCheckBox3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox3.setText("YES");
 
+        buttonGroup2.add(jCheckBox4);
         jCheckBox4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox4.setText("LATER");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("RATE THE MOVIE");
 
+        rb1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb1MouseEntered(evt);
+            }
+        });
+
+        rb2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb2MouseEntered(evt);
+            }
+        });
+
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setText("AVERAGE RATINGS");
+
+        rb3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb3MouseEntered(evt);
+            }
+        });
+
+        rb4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb4MouseEntered(evt);
+            }
+        });
+
+        rb5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb5MouseEntered(evt);
+            }
+        });
 
         lb1.setText("Photo");
 
@@ -113,12 +156,14 @@ public class personalpage extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("RECOMMEND YOUR FRIENDS");
 
+        buttonGroup3.add(jCheckBox5);
         jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox5.setText("YES");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("SHORT DESCRIPTION");
 
+        buttonGroup3.add(jCheckBox6);
         jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox6.setText("NOT NOW");
 
@@ -138,7 +183,7 @@ public class personalpage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3)
+                    .addComponent(desp)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -184,15 +229,15 @@ public class personalpage extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jLabel10)
                                             .addGap(52, 52, 52)
-                                            .addComponent(jRadioButton11)
+                                            .addComponent(rb1)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRadioButton12)
+                                            .addComponent(rb2)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRadioButton13)
+                                            .addComponent(rb3)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRadioButton14)
+                                            .addComponent(rb4)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRadioButton15))))
+                                            .addComponent(rb5))))
                                 .addGap(35, 35, 35)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton1)
@@ -226,7 +271,7 @@ public class personalpage extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(desp, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
@@ -239,11 +284,11 @@ public class personalpage extends javax.swing.JFrame {
                             .addComponent(jCheckBox4))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel10))
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jRadioButton13)
-                    .addComponent(jRadioButton14)
-                    .addComponent(jRadioButton15)
+                    .addComponent(rb1)
+                    .addComponent(rb2)
+                    .addComponent(rb3)
+                    .addComponent(rb4)
+                    .addComponent(rb5)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -262,7 +307,8 @@ public class personalpage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-setExtendedState(this.MAXIMIZED_BOTH);
+    desp.setEditable(false);
+        setExtendedState(this.MAXIMIZED_BOTH);
         lb1.setIcon(LabelImage.src); 
     try{          //Connection Code 
        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
@@ -275,7 +321,7 @@ setExtendedState(this.MAXIMIZED_BOTH);
            String movie_desc = rs.getString("about_movie");
            double avgs = rs.getDouble("avg_rating");
            int num = rs.getInt("no_of_reviews");
-           jTextField3.setText(movie_desc);
+           desp.setText(movie_desc);
             num_view.setText(num+"");
             avg_rate.setText(avgs+"");
        }
@@ -287,6 +333,50 @@ setExtendedState(this.MAXIMIZED_BOTH);
       // return false;
    }
     }//GEN-LAST:event_formWindowOpened
+
+    private void despActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_despActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_despActionPerformed
+
+    private void rb1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb1MouseEntered
+       rb1.setSelected(true);
+       rb2.setSelected(false);
+       rb3.setSelected(false);
+       rb4.setSelected(false);
+       rb5.setSelected(false);
+    }//GEN-LAST:event_rb1MouseEntered
+
+    private void rb2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb2MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(false);
+       rb4.setSelected(false);
+       rb5.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb2MouseEntered
+
+    private void rb3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb3MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(false);
+       rb5.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb3MouseEntered
+
+    private void rb4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb4MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb4MouseEntered
+
+    private void rb5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb5MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb5MouseEntered
 
     /**
      * @param args the command line arguments
@@ -325,6 +415,10 @@ setExtendedState(this.MAXIMIZED_BOTH);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel avg_rate;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JTextField desp;
     private javax.swing.JLabel imdb;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -344,13 +438,12 @@ setExtendedState(this.MAXIMIZED_BOTH);
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lb1;
     private javax.swing.JLabel num_view;
+    private javax.swing.JRadioButton rb1;
+    private javax.swing.JRadioButton rb2;
+    private javax.swing.JRadioButton rb3;
+    private javax.swing.JRadioButton rb4;
+    private javax.swing.JRadioButton rb5;
     // End of variables declaration//GEN-END:variables
 }
