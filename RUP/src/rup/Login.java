@@ -167,52 +167,98 @@ private boolean validate_login(String username,String password) {
     int numberOfTries = 3;
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
 
-        String username= tf1.getText();
-        String password = new String(pw.getPassword());
-        String hashedPassword = password;
-        // String hashedPassword = generateHash(password);
-        MessageDigest digest;
+         String username= tf1.getText();
+            String password = new String(pw.getPassword());
+            String hashedPassword = password;
+           // String hashedPassword = generateHash(password);
+           MessageDigest digest;
         try {
             digest = MessageDigest.getInstance("SHA-256");
-
+        
             byte[] hash = digest.digest(password.getBytes("UTF-8"));
             hashedPassword = DatatypeConverter.printHexBinary(hash);
-        } catch (Exception ex) {
+            } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(hashedPassword);
-        if(validate_login(username,hashedPassword)){
-            JOptionPane.showMessageDialog(null, "Authenticated");
-            numberOfTries=3;                //reseting no. of tries
-        }
-        else{
-            numberOfTries--;
-            if(numberOfTries==0){
-                JOptionPane.showMessageDialog(null,"Login Failed\nPlease Try Later");
-                System.exit(0);         //exit if exceeds no. of tries
+            System.out.println(hashedPassword);
+            if(validate_login(username,hashedPassword)){
+                JOptionPane.showMessageDialog(null, "Authenticated");
+                numberOfTries=3;                //reseting no. of tries
             }
-            Object[] options = {"Yes",
-                "No",
-                "Register"};
-            int n = JOptionPane.showOptionDialog(null,
-                "Do you want to try again?\n"+numberOfTries+" tries remain",
-                "Login Failed",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                options,
-                options[2]);
-            if(n==2){                                   //chooses register button
-                new Register().setVisible(true);        //go to register form
-                this.setVisible(false);
+            else{
+                numberOfTries--;
+                if(numberOfTries==0){
+                    JOptionPane.showMessageDialog(null,"Login Failed\nPlease Try Later");
+                    System.exit(0);         //exit if exceeds no. of tries
+                }
+                Object[] options = {"Yes",
+                        "No",
+                        "Register"};
+                int n = JOptionPane.showOptionDialog(null,
+                            "Do you want to try again?\n"+numberOfTries+" tries remain",
+                            "Login Failed",
+                            JOptionPane.YES_NO_CANCEL_OPTION,
+                            JOptionPane.QUESTION_MESSAGE,
+                            null,
+                            options,
+                            options[2]);
+                if(n==2){                                   //chooses register button
+                    new Register().setVisible(true);        //go to register form
+                    this.setVisible(false);
+                }
+                else if(n==1)                               // chooses no button
+                    System.exit(0);
+                else{                                       //wants to try again
+                    tf1.setText("");
+                    pw.setText("");
+                }
             }
-            else if(n==1)                               // chooses no button
-            System.exit(0);
-            else{                                       //wants to try again
-                tf1.setText("");
-                pw.setText("");
-            }
-        }
+//        String username= tf1.getText();
+//        String password = new String(pw.getPassword());
+//        String hashedPassword = password;
+//        // String hashedPassword = generateHash(password);
+//        MessageDigest digest;
+//        try {
+//            digest = MessageDigest.getInstance("SHA-256");
+//
+//            byte[] hash = digest.digest(password.getBytes("UTF-8"));
+//            hashedPassword = DatatypeConverter.printHexBinary(hash);
+//        } catch (Exception ex) {
+//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        System.out.println(hashedPassword);
+//        if(validate_login(username,hashedPassword)){
+//            JOptionPane.showMessageDialog(null, "Authenticated");
+//            numberOfTries=3;                //reseting no. of tries
+//        }
+//        else{
+//            numberOfTries--;
+//            if(numberOfTries==0){
+//                JOptionPane.showMessageDialog(null,"Login Failed\nPlease Try Later");
+//                System.exit(0);         //exit if exceeds no. of tries
+//            }
+//            Object[] options = {"Yes",
+//                "No",
+//                "Register"};
+//            int n = JOptionPane.showOptionDialog(null,
+//                "Do you want to try again?\n"+numberOfTries+" tries remain",
+//                "Login Failed",
+//                JOptionPane.YES_NO_CANCEL_OPTION,
+//                JOptionPane.QUESTION_MESSAGE,
+//                null,
+//                options,
+//                options[2]);
+//            if(n==2){                                   //chooses register button
+//                new Register().setVisible(true);        //go to register form
+//                this.setVisible(false);
+//            }
+//            else if(n==1)                               // chooses no button
+//            System.exit(0);
+//            else{                                       //wants to try again
+//                tf1.setText("");
+//                pw.setText("");
+//            }
+//        }
     }//GEN-LAST:event_submitActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

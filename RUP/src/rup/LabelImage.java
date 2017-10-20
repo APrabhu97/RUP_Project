@@ -14,10 +14,5 @@ import javax.swing.Icon;
 public class LabelImage {
     public
     static Icon src;
-    Icon getIconImage(){
-        return src;
-    }
-    void setIconImage(Icon sr){
-        src=sr;
-    }
+    static int id;
 }

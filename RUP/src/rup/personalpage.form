@@ -48,19 +48,6 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
@@ -73,15 +60,33 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="0" pref="218" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="cr_rate" max="32767" attributes="0"/>
+                          <Component id="avg_rate" pref="47" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="148" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="movie_dsp" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -163,22 +168,24 @@
                           <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="cr_rate" max="32767" attributes="0"/>
                           <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton4" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton5" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton5" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="avg_rate" max="32767" attributes="0"/>
                           <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton6" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton7" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton8" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton9" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton10" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton7" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton8" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton9" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButton10" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="lb1" min="-2" pref="154" max="-2" attributes="0"/>
@@ -188,7 +195,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField3" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="movie_dsp" min="-2" pref="71" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -229,7 +236,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="movie_dsp">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
@@ -428,6 +435,16 @@
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="ADD TO WATCHLIST"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cr_rate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="avg_rate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel13"/>
       </Properties>
     </Component>
   </SubComponents>

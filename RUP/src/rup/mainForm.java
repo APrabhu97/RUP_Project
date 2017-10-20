@@ -220,6 +220,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
         Icon src = lb1.getIcon();
         LabelImage.src=src;
+        LabelImage.id=101;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb1MouseClicked
@@ -227,6 +228,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb2MouseClicked
         Icon src = lb2.getIcon();
         LabelImage.src=src;
+        LabelImage.id=102;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb2MouseClicked
@@ -234,6 +236,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb3MouseClicked
         Icon src = lb3.getIcon();
         LabelImage.src=src;
+        LabelImage.id=103;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb3MouseClicked
@@ -241,6 +244,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb4MouseClicked
         Icon src = lb4.getIcon();
         LabelImage.src=src;
+        LabelImage.id=104;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb4MouseClicked
@@ -248,6 +252,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb5MouseClicked
         Icon src = lb5.getIcon();
         LabelImage.src=src;
+        LabelImage.id=105;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb5MouseClicked
@@ -255,6 +260,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb6MouseClicked
         Icon src = lb6.getIcon();
         LabelImage.src=src;
+        LabelImage.id=106;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb6MouseClicked
@@ -262,6 +268,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb7MouseClicked
         Icon src = lb7.getIcon();
         LabelImage.src=src;
+        LabelImage.id=107;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb7MouseClicked
@@ -269,6 +276,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb8MouseClicked
         Icon src = lb8.getIcon();
         LabelImage.src=src;
+        LabelImage.id=108;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb8MouseClicked
@@ -276,6 +284,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb9MouseClicked
         Icon src = lb9.getIcon();
         LabelImage.src=src;
+        LabelImage.id=109;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb9MouseClicked
@@ -283,6 +292,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb10MouseClicked
         Icon src = lb10.getIcon();
         LabelImage.src=src;
+        LabelImage.id=110;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb10MouseClicked
@@ -290,6 +300,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb11MouseClicked
         Icon src = lb11.getIcon();
         LabelImage.src=src;
+        LabelImage.id=111;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb11MouseClicked
@@ -297,6 +308,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb12MouseClicked
         Icon src = lb12.getIcon();
         LabelImage.src=src;
+        LabelImage.id=112;
         new personalpage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lb12MouseClicked
