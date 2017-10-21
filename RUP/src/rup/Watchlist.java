@@ -5,6 +5,8 @@
  */
 package rup;
 
+import java.awt.Color;
+
 /**
  *
  * @author mahe
@@ -30,7 +32,7 @@ public class Watchlist extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,9 +43,19 @@ public class Watchlist extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel2.setText("RATE MY SHOW");
+        hyp.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        hyp.setText("RATE MY SHOW");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,7 +64,7 @@ public class Watchlist extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hyp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -64,7 +76,7 @@ public class Watchlist extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jLabel2)
+                .addComponent(hyp)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -74,6 +86,19 @@ public class Watchlist extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
+this.setVisible(false);
+new mainForm().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseClicked
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.red);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
 
     /**
      * @param args the command line arguments
@@ -111,8 +136,8 @@ public class Watchlist extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hyp;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
  */
 package rup;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -64,7 +65,7 @@ public class personalpage extends javax.swing.JFrame {
         avg_rate = new javax.swing.JLabel();
         imdb = new javax.swing.JLabel();
         num_view = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
         login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -178,12 +179,17 @@ public class personalpage extends javax.swing.JFrame {
 
         num_view.setText("jLabel5");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel1.setText("RATE MY SHOW");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        hyp.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        hyp.setText("RATE MY SHOW");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
             }
         });
 
@@ -271,7 +277,7 @@ public class personalpage extends javax.swing.JFrame {
                                     .addComponent(imdb, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(hyp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(login, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addContainerGap())))))))
         );
@@ -281,7 +287,7 @@ public class personalpage extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(hyp)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(login)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -411,14 +417,22 @@ rb1.setSelected(true);
        rb5.setSelected(true);        // TODO add your handling code here:
     }//GEN-LAST:event_rb5MouseEntered
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
 this.setVisible(false);
 new mainForm().setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_hypMouseClicked
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginActionPerformed
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
 
     /**
      * @param args the command line arguments
@@ -461,6 +475,7 @@ new mainForm().setVisible(true);// TODO add your handling code here:
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JTextField desp;
+    private javax.swing.JLabel hyp;
     private javax.swing.JLabel imdb;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -471,7 +486,6 @@ new mainForm().setVisible(true);// TODO add your handling code here:
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

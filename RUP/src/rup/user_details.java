@@ -5,6 +5,7 @@
  */
 package rup;
 
+import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 /**
@@ -43,7 +44,7 @@ public class user_details extends javax.swing.JFrame {
         tf5 = new javax.swing.JTextField();
         tf6 = new javax.swing.JTextField();
         submit = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -88,9 +89,19 @@ public class user_details extends javax.swing.JFrame {
         submit.setText("Submit");
         submit.setToolTipText("");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel7.setText("RATE MY SHOW");
+        hyp.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        hyp.setText("RATE MY SHOW");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,14 +133,14 @@ public class user_details extends javax.swing.JFrame {
                             .addComponent(edit)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jLabel7)
+                .addComponent(hyp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(edit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -193,6 +204,20 @@ public class user_details extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_editActionPerformed
 
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
+this.setVisible(false);
+new mainForm().setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseClicked
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.red);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -230,13 +255,13 @@ public class user_details extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton edit;
+    private javax.swing.JLabel hyp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JButton submit;
     private javax.swing.JTextField tf1;
     private javax.swing.JTextField tf2;
