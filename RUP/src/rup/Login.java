@@ -241,7 +241,10 @@ private boolean validate_login(String username,String password) {
             System.out.println(hashedPassword);
             if(validate_login(username,hashedPassword)){
                 JOptionPane.showMessageDialog(null, "Authenticated");
-                numberOfTries=3;                //reseting no. of tries
+                Basic.login=1;
+                numberOfTries=3;
+                this.setVisible(false);
+                new mainForm().setVisible(true);                 //reseting no. of tries
             }
             else{
                 numberOfTries--;

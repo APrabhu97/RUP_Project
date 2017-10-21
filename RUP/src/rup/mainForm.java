@@ -5,6 +5,7 @@
  */
 package rup;
 
+import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -47,6 +48,7 @@ public class mainForm extends javax.swing.JFrame {
         lb10 = new javax.swing.JLabel();
         lb11 = new javax.swing.JLabel();
         lb12 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -133,6 +135,21 @@ public class mainForm extends javax.swing.JFrame {
             }
         });
 
+        hyp.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        hyp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hyp.setText("Login/Register");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,11 +182,16 @@ public class mainForm extends javax.swing.JFrame {
                             .addComponent(lb8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lb4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(38, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -198,7 +220,10 @@ public class mainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-      setExtendedState(this.MAXIMIZED_BOTH);
+
+        if(Basic.login==1)
+            hyp.setVisible(false);
+        setExtendedState(this.MAXIMIZED_BOTH);
         lb1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg").getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
        lb2.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb2.jpg").getImage().getScaledInstance(lb2.getWidth(), lb2.getHeight(), Image.SCALE_SMOOTH)));
        lb3.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb3.jpg").getImage().getScaledInstance(lb3.getWidth(), lb3.getHeight(), Image.SCALE_SMOOTH)));
@@ -314,6 +339,19 @@ public class mainForm extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_lb12MouseClicked
 
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
+this.setVisible(false);
+new Login().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseClicked
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.BLUE);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -350,6 +388,7 @@ public class mainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hyp;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel lb1;
     private javax.swing.JLabel lb10;
