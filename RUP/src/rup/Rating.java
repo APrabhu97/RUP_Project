@@ -5,6 +5,8 @@
  */
 package rup;
 
+import java.awt.Color;
+
 /**
  *
  * @author mahe
@@ -28,15 +30,25 @@ public class Rating extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Top Rated Movies");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel1.setText("RATE MY SHOW");
+        hyp.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        hyp.setText("RATE MY SHOW");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -46,7 +58,7 @@ public class Rating extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton1)))
@@ -56,7 +68,7 @@ public class Rating extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel1)
+                .addComponent(hyp)
                 .addGap(66, 66, 66)
                 .addComponent(jButton1)
                 .addContainerGap(269, Short.MAX_VALUE))
@@ -64,6 +76,19 @@ public class Rating extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
+this.setVisible(false);
+new mainForm().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseClicked
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.red);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
 
     /**
      * @param args the command line arguments
@@ -101,7 +126,7 @@ public class Rating extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hyp;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package rup;
+import java.awt.Color;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -61,7 +62,7 @@ public class Register extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
+        hyp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -137,9 +138,19 @@ public class Register extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel13.setText("FAVOURITE GENRE");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel14.setText("RATE MY SHOW");
+        hyp.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        hyp.setText("RATE MY SHOW");
+        hyp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hypMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hypMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hypMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,14 +212,14 @@ public class Register extends javax.swing.JFrame {
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,6 +337,19 @@ private boolean validate_login(String username,String password) {
 setExtendedState(this.MAXIMIZED_BOTH);        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
 
+    private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
+this.setVisible(false);
+new mainForm().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseClicked
+
+    private void hypMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseEntered
+hyp.setForeground(Color.red);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseEntered
+
+    private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
+hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
+    }//GEN-LAST:event_hypMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -362,13 +386,13 @@ setExtendedState(this.MAXIMIZED_BOTH);        // TODO add your handling code her
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hyp;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
