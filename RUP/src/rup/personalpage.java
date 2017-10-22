@@ -6,11 +6,15 @@
 package rup;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import static rup.LabelImage.path;
 
 /**
  *
@@ -347,14 +351,21 @@ public class personalpage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+        
+        Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+        LabelImage.src=src;
+        lb1.setIcon(LabelImage.src); 
+        
         if(Basic.login==1)
             panels.setVisible(true);
         else
             panels.setVisible(false);
-        desp.setEditable(false);
+        
+        desp.setEditable(false);   
+        desp.setEnabled(false);
+        desp.setDisabledTextColor(Color.BLACK);//description text area
         setExtendedState(this.MAXIMIZED_BOTH);
-        lb1.setIcon(LabelImage.src); 
+        
     try{          //Connection Code 
        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");

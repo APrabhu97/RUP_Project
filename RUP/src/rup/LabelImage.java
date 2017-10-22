@@ -15,4 +15,5 @@ public class LabelImage {
     public
     static Icon src;
     static int id;
+    static String path;
 }

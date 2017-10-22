@@ -7,6 +7,10 @@ package rup;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -23,6 +27,105 @@ public class mainForm extends javax.swing.JFrame {
      */
     public mainForm() {
         initComponents();
+        if(Basic.login==1)      //checking whether the user is logged in or not
+            hyp.setVisible(false);
+        setExtendedState(this.MAXIMIZED_BOTH);
+       try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,link from movie_details;");
+       ResultSet rs = pst.executeQuery();
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb1.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb2.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb3.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb4.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb5.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb6.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb7.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb8.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb9.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb10.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb11.setIcon(LabelImage.src);
+       }  
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
+           LabelImage.src=src;
+           lb12.setIcon(LabelImage.src);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }
 
     /**
@@ -34,7 +137,7 @@ public class mainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tf1 = new javax.swing.JTextField();
+        srch = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         lb1 = new javax.swing.JLabel();
         lb2 = new javax.swing.JLabel();
@@ -62,6 +165,11 @@ public class mainForm extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         lb1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,7 +266,7 @@ public class mainForm extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(tf1, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(srch, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
@@ -193,7 +301,7 @@ public class mainForm extends javax.swing.JFrame {
                 .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(srch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,122 +329,283 @@ public class mainForm extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 
-        if(Basic.login==1)
-            hyp.setVisible(false);
-        setExtendedState(this.MAXIMIZED_BOTH);
-        lb1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg").getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
-       lb2.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb2.jpg").getImage().getScaledInstance(lb2.getWidth(), lb2.getHeight(), Image.SCALE_SMOOTH)));
-       lb3.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb3.jpg").getImage().getScaledInstance(lb3.getWidth(), lb3.getHeight(), Image.SCALE_SMOOTH)));
-       lb4.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb4.jpg").getImage().getScaledInstance(lb4.getWidth(), lb4.getHeight(), Image.SCALE_SMOOTH)));
-       lb5.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb5.jpg").getImage().getScaledInstance(lb5.getWidth(), lb5.getHeight(), Image.SCALE_SMOOTH)));
-       lb6.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb6.jpg").getImage().getScaledInstance(lb6.getWidth(), lb6.getHeight(), Image.SCALE_SMOOTH)));
-       lb7.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb7.jpg").getImage().getScaledInstance(lb7.getWidth(), lb7.getHeight(), Image.SCALE_SMOOTH)));
-       lb8.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb8.jpg").getImage().getScaledInstance(lb8.getWidth(), lb8.getHeight(), Image.SCALE_SMOOTH)));
-       lb9.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb9.jpg").getImage().getScaledInstance(lb9.getWidth(), lb9.getHeight(), Image.SCALE_SMOOTH)));
-       lb10.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb10.jpg").getImage().getScaledInstance(lb10.getWidth(), lb10.getHeight(), Image.SCALE_SMOOTH)));
-       lb11.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb11.jpg").getImage().getScaledInstance(lb11.getWidth(), lb11.getHeight(), Image.SCALE_SMOOTH)));
-       lb12.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\mahe\\Desktop\\posters\\lb12.jpg").getImage().getScaledInstance(lb12.getWidth(), lb12.getHeight(), Image.SCALE_SMOOTH)));
+        
     }//GEN-LAST:event_formWindowOpened
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-//        lb1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("C:\\Users\\mahe\\Desktop\\posters\\lb1.jpg")).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH)));
+
 
     }//GEN-LAST:event_formWindowActivated
 
     private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
-        Icon src = lb1.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=101;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+
+        try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 101;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
+        
+//        Icon src = lb1.getIcon();
+//        LabelImage.src=src;
+//        LabelImage.id=101;
+//        new personalpage().setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_lb1MouseClicked
 
     private void lb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb2MouseClicked
-        Icon src = lb2.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=102;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 102;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb2MouseClicked
 
     private void lb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb3MouseClicked
-        Icon src = lb3.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=103;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 103;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb3MouseClicked
 
     private void lb4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb4MouseClicked
-        Icon src = lb4.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=104;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 104;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb4MouseClicked
 
     private void lb5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb5MouseClicked
-        Icon src = lb5.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=105;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 105;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb5MouseClicked
 
     private void lb6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb6MouseClicked
-        Icon src = lb6.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=106;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 106;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb6MouseClicked
 
     private void lb7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb7MouseClicked
-        Icon src = lb7.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=107;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 107;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb7MouseClicked
 
     private void lb8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb8MouseClicked
-        Icon src = lb8.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=108;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 108;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb8MouseClicked
 
     private void lb9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb9MouseClicked
-        Icon src = lb9.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=109;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 109;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb9MouseClicked
 
     private void lb10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb10MouseClicked
-        Icon src = lb10.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=110;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+        try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 110;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb10MouseClicked
 
     private void lb11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb11MouseClicked
-        Icon src = lb11.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=111;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 111;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb11MouseClicked
 
     private void lb12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb12MouseClicked
-        Icon src = lb12.getIcon();
-        LabelImage.src=src;
-        LabelImage.id=112;
-        new personalpage().setVisible(true);
-        this.setVisible(false);
+         try{          //Connection Code 
+       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
+                                                                    
+       PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 112;");
+       ResultSet rs = pst.executeQuery();    
+       int num =1;
+       if(rs.next()){
+           LabelImage.path=rs.getString("link");
+           LabelImage.id=rs.getInt("movie_id");
+           new personalpage().setVisible(true);
+           this.setVisible(false);
+       }  
+       conn.close();
+   }
+   catch(Exception e){
+       e.printStackTrace();
+       
+   }
     }//GEN-LAST:event_lb12MouseClicked
 
     private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
@@ -351,6 +620,13 @@ hyp.setForeground(Color.BLUE);        // TODO add your handling code here:
     private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
 hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_hypMouseExited
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        Basic.searched=srch.getText();
+        this.setVisible(false);
+        new search_results().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -402,7 +678,7 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     private javax.swing.JLabel lb7;
     private javax.swing.JLabel lb8;
     private javax.swing.JLabel lb9;
-    private javax.swing.JTextField tf1;
+    private javax.swing.JTextField srch;
     // End of variables declaration//GEN-END:variables
 }
 

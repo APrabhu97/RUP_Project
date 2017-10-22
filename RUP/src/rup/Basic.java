@@ -12,4 +12,5 @@ package rup;
 public class Basic {
     public static
             int login; //0 = not logged in, 1= logged in
+            static String searched;
 }
