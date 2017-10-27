@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package RUP;
+package rup
+        ;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,8 +20,8 @@ public class Conn {
             static Connection connect(){
                 try{          //Connection Code 
                     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull",
-                                                     "root","robin");  
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:33060/rup_project?zeroDateTimeBehavior=convertToNull",
+                                                     "root","password");  
                     int t;
                     return conn;
                 }
