@@ -53,6 +53,16 @@ public class Login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                formMouseMoved(evt);
+            }
+        });
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -360,6 +370,14 @@ hyp.setForeground(Color.red);      // TODO add your handling code here:
     private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
 hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_hypMouseExited
+
+    private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseMoved
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+jLabel4.setBounds(0,0,this.getWidth(),this.getHeight());        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseEntered
 
     /**
      * @param args the command line arguments
