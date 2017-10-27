@@ -66,6 +66,7 @@ public class Register extends javax.swing.JFrame {
         hyp = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -84,7 +85,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 30;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 14, 0, 0);
         getContentPane().add(jLabel2, gridBagConstraints);
 
         tf1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +115,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 46;
         gridBagConstraints.ipady = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(20, 66, 11, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 66, 0, 0);
         getContentPane().add(register, gridBagConstraints);
 
         pw.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +145,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 63;
         gridBagConstraints.ipady = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(20, 138, 11, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 138, 0, 0);
         getContentPane().add(jButton1, gridBagConstraints);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -155,7 +156,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 27;
         gridBagConstraints.ipady = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(10, 14, 0, 0);
         getContentPane().add(jLabel1, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -167,7 +168,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 32;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 14, 0, 0);
         getContentPane().add(jLabel3, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -192,7 +193,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.gridy = 7;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(16, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(16, 14, 0, 0);
         getContentPane().add(jLabel4, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -202,7 +203,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.gridy = 9;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(27, 14, 0, 0);
         getContentPane().add(jLabel5, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -220,7 +221,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.gridy = 11;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(31, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(31, 14, 0, 0);
         getContentPane().add(jLabel6, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -284,7 +285,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.gridy = 17;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(32, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(32, 14, 0, 0);
         getContentPane().add(jLabel10, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -330,7 +331,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.gridy = 21;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(31, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(31, 14, 0, 0);
         getContentPane().add(jLabel13, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -361,7 +362,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 499;
         gridBagConstraints.ipady = -1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 20, 0, 54);
+        gridBagConstraints.insets = new java.awt.Insets(5, 14, 0, 0);
         getContentPane().add(hyp, gridBagConstraints);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -372,7 +373,7 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 34;
         gridBagConstraints.ipady = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 14, 0, 0);
         getContentPane().add(jLabel14, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -381,6 +382,22 @@ public class Register extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 12, 0, 0);
         getContentPane().add(jTextField10, gridBagConstraints);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rup/background.jpg"))); // NOI18N
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel15MouseEntered(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 14;
+        gridBagConstraints.gridheight = 25;
+        gridBagConstraints.ipadx = -1260;
+        gridBagConstraints.ipady = -530;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jLabel15, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -454,6 +471,10 @@ hyp.setForeground(Color.red);        // TODO add your handling code here:
 hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_hypMouseExited
 
+    private void jLabel15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseEntered
+        jLabel15.setBounds(0,0,this.getWidth(),this.getHeight());
+    }//GEN-LAST:event_jLabel15MouseEntered
+
     /**
      * @param args the command line arguments
      */
@@ -498,6 +519,7 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
