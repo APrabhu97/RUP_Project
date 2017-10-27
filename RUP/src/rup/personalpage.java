@@ -445,9 +445,7 @@ public class personalpage extends javax.swing.JFrame {
         setExtendedState(this.MAXIMIZED_BOTH);
         
     try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_id="+LabelImage.id+";");
        ResultSet rs = pst.executeQuery();    
        //conn.close();

@@ -31,9 +31,7 @@ public class mainForm extends javax.swing.JFrame {
             hyp.setVisible(false);
         setExtendedState(this.MAXIMIZED_BOTH);
        try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,link from movie_details;");
        ResultSet rs = pst.executeQuery();
        if(rs.next()){
@@ -340,9 +338,7 @@ public class mainForm extends javax.swing.JFrame {
     private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
 
         try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                           
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 101;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -368,9 +364,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb2MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 102;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -390,9 +384,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb3MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 103;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -412,9 +404,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb4MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 104;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -434,9 +424,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb5MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                          
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 105;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -456,9 +444,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb6MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 106;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -478,9 +464,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb7MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 107;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -500,9 +484,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb8MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 108;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -522,9 +504,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb9MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 109;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -544,9 +524,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb10MouseClicked
         try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 110;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -566,9 +544,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb11MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                           
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 111;");
        ResultSet rs = pst.executeQuery();    
        int num =1;
@@ -588,9 +564,7 @@ public class mainForm extends javax.swing.JFrame {
 
     private void lb12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb12MouseClicked
          try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name,link from movie_details where movie_id = 112;");
        ResultSet rs = pst.executeQuery();    
        int num =1;

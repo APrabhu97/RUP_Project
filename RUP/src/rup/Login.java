@@ -205,9 +205,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_tf1ActionPerformed
 private boolean validate_login(String username,String password) {
    try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+        // MySQL database connection
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select * from login where username = '"
                                 +username+"' and password = '"+password+"'");
        ResultSet rs = pst.executeQuery();    

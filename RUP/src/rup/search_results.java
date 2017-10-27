@@ -137,9 +137,7 @@ public class search_results extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 
     try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                          
        PreparedStatement pst =   conn.prepareStatement("Select movie_id,movie_name from movie_details where movie_name like '%"
                +Basic.searched+"%';");
        ResultSet rs = pst.executeQuery();    
@@ -166,9 +164,7 @@ public class search_results extends javax.swing.JFrame {
 
     private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
        try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_name = '"
                                 +lb1.getText()+"'");
        ResultSet rs = pst.executeQuery();    
@@ -187,9 +183,7 @@ public class search_results extends javax.swing.JFrame {
 
     private void lb2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb2MouseClicked
 try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+      Connection conn = Conn.connect();                                                            
        PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_name = '"
                                 +lb2.getText()+"'");
        ResultSet rs = pst.executeQuery();    
@@ -208,9 +202,7 @@ try{          //Connection Code
 
     private void lb3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb3MouseClicked
 try{          //Connection Code 
-       Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull","root","robin");
-                                                                    
+       Connection conn = Conn.connect();                                                             
        PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_name = '"
                                 +lb1.getText()+"'");
        ResultSet rs = pst.executeQuery();    
