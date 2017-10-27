@@ -20,8 +20,8 @@ public class Conn {
             static Connection connect(){
                 try{          //Connection Code 
                     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:33060/rup_project?zeroDateTimeBehavior=convertToNull",
-                                                     "root","password");  
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull",
+                                                     "root","robin");  
                     int t;
                     return conn;
                 }
