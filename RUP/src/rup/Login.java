@@ -230,7 +230,7 @@ private boolean validate_login(String username,String password) {
    try{          //Connection Code 
         // MySQL database connection
        Connection conn = Conn.connect();                                                             
-       PreparedStatement pst =   conn.prepareStatement("Select * from login where username = '"
+       PreparedStatement pst =   conn.prepareStatement("Select * from user_details where user_name = '"
                                 +username+"' and password = '"+password+"'");
        ResultSet rs = pst.executeQuery();    
        //conn.close();
