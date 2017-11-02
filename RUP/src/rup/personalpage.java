@@ -11,9 +11,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import org.openqa.selenium.WebDriver;
 import static rup.LabelImage.path;
 
 /**
@@ -21,7 +25,7 @@ import static rup.LabelImage.path;
  * @author mahe
  */
 public class personalpage extends javax.swing.JFrame {
-
+private static WebDriver driver;
     /**
      * Creates new form personalpage
      */
@@ -108,6 +112,11 @@ public class personalpage extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setText("GO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 16;
@@ -427,7 +436,7 @@ public class personalpage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+String movie_name;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         
         Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
@@ -450,6 +459,7 @@ public class personalpage extends javax.swing.JFrame {
        ResultSet rs = pst.executeQuery();    
        //conn.close();
        if(rs.next()){
+           movie_name = rs.getString("movie_name");
            String movie_desc = rs.getString("about_movie");
            double avgs = rs.getDouble("avg_rating");
            int num = rs.getInt("no_of_reviews");
@@ -522,6 +532,35 @@ hyp.setForeground(Color.RED);        // TODO add your handling code here:
     private void hypMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseExited
 hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_hypMouseExited
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\mahe\\Desktop\\chromedriver.exe");
+    driver = new ChromeDriver();
+    Dimension d;
+      d = new Dimension(0,0);
+   driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    try{
+       // InputStream ExcelFileToRead = new FileInputStream("C:\\Users\\mahe\\Desktop\\automation.xlsx");
+//        XSSFWorkbook  wb1 = new XSSFWorkbook(ExcelFileToRead);
+//	XSSFSheet sheetInp = wb1.getSheetAt(0);
+//        String loc = sheetInp.getRow(1).getCell(0).getStringCellValue();
+        String loc = "https://in.bookmyshow.com/manipal";
+	driver.get(loc);       
+        //Thread.sleep(3000);
+        //driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]"));
+        driver.findElement(By.xpath("//*[@id=\"quickbook-wrapper\"]/div[1]/div[1]/span[1]/input[2]")).sendKeys(movie_name);
+        driver.findElement(By.xpath("//*[@id=\"wzrk-cancel\"]")).click();
+        driver.findElement(By.xpath("//*[@id=\"quickbook-wrapper\"]/div[1]/div[1]/span[1]/input[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"quickbook-wrapper\"]/div[1]/div[1]/span[1]/div/div/div[2]")).click();
+        }
+	catch (Exception e)
+	{
+        String message = e.getMessage();
+        System.out.println("Error"+message);
+	}        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
