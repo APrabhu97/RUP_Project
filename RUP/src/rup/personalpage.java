@@ -12,6 +12,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +24,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import org.openqa.selenium.WebDriver;
 import static rup.LabelImage.path;
+
 
 /**
  *
@@ -54,11 +57,9 @@ private static WebDriver driver;
         jLabel6 = new javax.swing.JLabel();
         lb1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         avg_rate = new javax.swing.JLabel();
-        imdb = new javax.swing.JLabel();
         num_view = new javax.swing.JLabel();
         hyp = new javax.swing.JLabel();
         panels = new javax.swing.JPanel();
@@ -83,6 +84,7 @@ private static WebDriver driver;
         rb8 = new javax.swing.JRadioButton();
         rb9 = new javax.swing.JRadioButton();
         rb10 = new javax.swing.JRadioButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -116,18 +118,18 @@ private static WebDriver driver;
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("NO OF REVIEWERS");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("IMDB Rating");
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("SHORT DESCRIPTION");
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setText("ADD TO WATCHLIST");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         avg_rate.setText("jLabel13");
-
-        imdb.setText("jLabel1");
 
         num_view.setText("jLabel5");
 
@@ -153,6 +155,11 @@ private static WebDriver driver;
         buttonGroup3.add(jCheckBox5);
         jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox5.setText("YES");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
 
         buttonGroup3.add(jCheckBox6);
         jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -222,9 +229,56 @@ private static WebDriver driver;
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox2.setText("NO");
 
+        rb6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb6MouseEntered(evt);
+            }
+        });
         rb6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb6ActionPerformed(evt);
+            }
+        });
+
+        rb7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb7MouseEntered(evt);
+            }
+        });
+        rb7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb7ActionPerformed(evt);
+            }
+        });
+
+        rb8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb8MouseEntered(evt);
+            }
+        });
+        rb8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb8ActionPerformed(evt);
+            }
+        });
+
+        rb9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb9MouseEntered(evt);
+            }
+        });
+
+        rb10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb10MouseEntered(evt);
+            }
+        });
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton4.setText("forward");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -243,19 +297,15 @@ private static WebDriver driver;
                             .addComponent(hyp, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(51, 51, 51)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(num_view, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(62, 62, 62)
-                                        .addComponent(imdb, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addGap(28, 28, 28)
-                                        .addComponent(avg_rate, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(avg_rate, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(num_view, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabel7))
@@ -282,7 +332,9 @@ private static WebDriver driver;
                         .addGap(70, 70, 70)
                         .addComponent(jButton2)
                         .addGap(109, 109, 109)
-                        .addComponent(jButton3))
+                        .addComponent(jButton3)
+                        .addGap(104, 104, 104)
+                        .addComponent(jButton4))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,19 +382,11 @@ private static WebDriver driver;
                     .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(hyp)
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel2))
+                        .addGap(59, 59, 59)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
                             .addComponent(num_view, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jLabel3))
-                            .addComponent(imdb, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16)
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
@@ -409,13 +453,16 @@ private static WebDriver driver;
                         .addGap(4, 4, 4)
                         .addComponent(jLabel12))
                     .addComponent(jButton2)
-                    .addComponent(jButton3)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3)
+                        .addComponent(jButton4))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 String movie_name;
 double avgs ;
+int movie_id;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         
         Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
@@ -442,6 +489,7 @@ double avgs ;
            String movie_desc = rs.getString("about_movie");
            avgs = rs.getDouble("avg_rating");
            int num = rs.getInt("no_of_reviews");
+           movie_id=rs.getInt("movie_id");
            desp.setText(movie_desc);
             num_view.setText(num+"");
             avg_rate.setText(avgs+"");
@@ -524,69 +572,6 @@ rb1.setSelected(true);
        rb10.setSelected(false);
     }//GEN-LAST:event_rb5MouseEntered
 
-private void rb6MouseEntered(java.awt.event.MouseEvent evt) {                                 
-rb1.setSelected(true);
-       rb2.setSelected(true);
-       rb3.setSelected(true);
-       rb4.setSelected(true);
-       rb5.setSelected(true);   
-       rb6.setSelected(true);
-       rb7.setSelected(false);
-       rb8.setSelected(false);
-       rb9.setSelected(false);
-       rb10.setSelected(false);
-    }
-
-private void rb7MouseEntered(java.awt.event.MouseEvent evt) {                                 
-rb1.setSelected(true);
-       rb2.setSelected(true);
-       rb3.setSelected(true);
-       rb4.setSelected(true);
-       rb5.setSelected(true);   
-       rb6.setSelected(true);
-       rb7.setSelected(true);
-       rb8.setSelected(false);
-       rb9.setSelected(false);
-       rb10.setSelected(false);
-    }
-
-private void rb8MouseEntered(java.awt.event.MouseEvent evt) {                                 
-rb1.setSelected(true);
-       rb2.setSelected(true);
-       rb3.setSelected(true);
-       rb4.setSelected(true);
-       rb5.setSelected(true);   
-       rb6.setSelected(true);
-       rb7.setSelected(true);
-       rb8.setSelected(true);
-       rb9.setSelected(false);
-       rb10.setSelected(false);
-    }
-private void rb9MouseEntered(java.awt.event.MouseEvent evt) {                                 
-rb1.setSelected(true);
-       rb2.setSelected(true);
-       rb3.setSelected(true);
-       rb4.setSelected(true);
-       rb5.setSelected(true);   
-       rb6.setSelected(true);
-       rb7.setSelected(true);
-       rb8.setSelected(true);
-       rb9.setSelected(true);
-       rb10.setSelected(false); 
-    }
-
-private void rb10MouseEntered(java.awt.event.MouseEvent evt){                                 
-rb1.setSelected(true);
-       rb2.setSelected(true);
-       rb3.setSelected(true);
-       rb4.setSelected(true);
-       rb5.setSelected(true);   
-       rb6.setSelected(true);
-       rb7.setSelected(true);
-       rb8.setSelected(true);
-       rb9.setSelected(true);
-       rb10.setSelected(true);
-    }
     private void hypMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hypMouseClicked
 this.setVisible(false);
 new mainForm().setVisible(true);// TODO add your handling code here:
@@ -665,13 +650,109 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rb6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb6ActionPerformed
-        // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_rb6ActionPerformed
+
+    private void rb8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb8MouseEntered
+            rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);   
+       rb6.setSelected(true);
+       rb7.setSelected(true);
+       rb8.setSelected(true);
+       rb9.setSelected(false);
+       rb10.setSelected(false);
+    }//GEN-LAST:event_rb8MouseEntered
+
+    private void rb7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb7ActionPerformed
+
+    private void rb8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb8ActionPerformed
+
+    private void rb6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb6MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);   
+       rb6.setSelected(true);
+       rb7.setSelected(false);
+       rb8.setSelected(false);
+       rb9.setSelected(false);
+       rb10.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb6MouseEntered
+
+    private void rb7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb7MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);   
+       rb6.setSelected(true);
+       rb7.setSelected(true);
+       rb8.setSelected(false);
+       rb9.setSelected(false);
+       rb10.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb7MouseEntered
+
+    private void rb9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb9MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);   
+       rb6.setSelected(true);
+       rb7.setSelected(true);
+       rb8.setSelected(true);
+       rb9.setSelected(true);
+       rb10.setSelected(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb9MouseEntered
+
+    private void rb10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb10MouseEntered
+rb1.setSelected(true);
+       rb2.setSelected(true);
+       rb3.setSelected(true);
+       rb4.setSelected(true);
+       rb5.setSelected(true);   
+       rb6.setSelected(true);
+       rb7.setSelected(true);
+       rb8.setSelected(true);
+       rb9.setSelected(true);
+       rb10.setSelected(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_rb10MouseEntered
+
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try{
+            Connection conn=Conn.connect();
+            PreparedStatement pst=conn.prepareStatement("Insert into watchlist values('"+Login.name+"','"+movie_name+"',"+movie_id+");");
+           pst.execute();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+Watchlist obj=new Watchlist();
+obj.setVisible(true);
+this.setVisible(false);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -710,10 +791,10 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JTextField desp;
     private javax.swing.JLabel hyp;
-    private javax.swing.JLabel imdb;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -724,7 +805,6 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

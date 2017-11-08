@@ -226,13 +226,16 @@ public class Login extends javax.swing.JFrame {
     private void tf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf1ActionPerformed
-private boolean validate_login(String username,String password) {
+public static String name;
+    public static boolean validate_login(String username,String password) {
    try{          //Connection Code 
         // MySQL database connection
        Connection conn = Conn.connect();                                                             
-       PreparedStatement pst =   conn.prepareStatement("Select * from user_details where user_name = '"
+       PreparedStatement pst =   conn.prepareStatement("Select * from login where username = '"
                                 +username+"' and password = '"+password+"'");
-       ResultSet rs = pst.executeQuery();    
+       ResultSet rs = pst.executeQuery();  
+       name=username;
+       
        //conn.close();
        if(rs.next())            
            return true;    
