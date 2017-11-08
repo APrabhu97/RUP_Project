@@ -11,9 +11,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -462,7 +465,7 @@ double avgs ;
         
     try{          //Connection Code 
        Connection conn = Conn.connect();                                                             
-       PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_id="+LabelImage.id+";");
+       PreparedStatement pst =   conn.prepareStatement("Select * from movie_details where movie_id= "+LabelImage.id+";");
        ResultSet rs = pst.executeQuery();    
        //conn.close();
        if(rs.next()){
@@ -594,8 +597,14 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
         double art=(val+avgs)/2;
         avg_rate.setText(art+"");
         Connection conn = Conn.connect();
-        PreparedStatement pst = conn.prepareStatement("update movie_details set avg_rating="+art+" where movie_id=");
-        ResultSet rs = pst.executeQuery();
+        PreparedStatement pst;
+    try {
+        pst = conn.prepareStatement("update movie_details set avg_rating="+art+" where movie_id="+LabelImage.id+";");
+        pst.execute();
+    } catch (SQLException ex) {
+        Logger.getLogger(personalpage.class.getName()).log(Level.SEVERE, null, ex);
+    }
+        JOptionPane.showMessageDialog(null,"Thank you");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
