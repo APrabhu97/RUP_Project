@@ -330,6 +330,7 @@ private static WebDriver driver;
         gridBagConstraints.insets = new java.awt.Insets(20, 1, 0, 0);
         getContentPane().add(rb3, gridBagConstraints);
 
+        rb4.setName(""); // NOI18N
         rb4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 rb4MouseEntered(evt);
@@ -357,6 +358,11 @@ private static WebDriver driver;
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("SUBMIT ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 47;
         gridBagConstraints.gridy = 13;
@@ -437,6 +443,7 @@ private static WebDriver driver;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 String movie_name;
+double avgs ;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         
         Icon src = new ImageIcon(new ImageIcon(LabelImage.path).getImage().getScaledInstance(lb1.getWidth(), lb1.getHeight(), Image.SCALE_SMOOTH));
@@ -461,7 +468,7 @@ String movie_name;
        if(rs.next()){
            movie_name = rs.getString("movie_name");
            String movie_desc = rs.getString("about_movie");
-           double avgs = rs.getDouble("avg_rating");
+           avgs = rs.getDouble("avg_rating");
            int num = rs.getInt("no_of_reviews");
            desp.setText(movie_desc);
             num_view.setText(num+"");
@@ -561,6 +568,35 @@ hyp.setForeground(Color.BLACK);        // TODO add your handling code here:
         System.out.println("Error"+message);
 	}        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int val=0;
+        if(rb1.isSelected())
+            val=1;
+        else if(rb2.isSelected())
+            val=2;
+        else if(rb3.isSelected())
+            val=3;
+        else if(rb4.isSelected())
+            val=4;
+        else if(rb5.isSelected())
+            val=5;
+        else if(rb5.isSelected())
+            val=5;
+        else if(rb5.isSelected())
+            val=5;
+        else if(rb5.isSelected())
+            val=5;
+        else if(rb5.isSelected())
+            val=5;
+        else if(rb5.isSelected())
+            val=5;
+        double art=(val+avgs)/2;
+        avg_rate.setText(art+"");
+        Connection conn = Conn.connect();
+        PreparedStatement pst = conn.prepareStatement("update movie_details set avg_rating="+art+" where movie_id=");
+        ResultSet rs = pst.executeQuery();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
