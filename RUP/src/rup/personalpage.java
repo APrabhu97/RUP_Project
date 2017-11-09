@@ -37,6 +37,10 @@ private static WebDriver driver;
      */
     public personalpage() {
         initComponents();
+        if(Basic.login==1){
+            p1.setEnabled(true);
+        }
+        p1.setEnabled(false);
     }
 
     /**
@@ -52,39 +56,40 @@ private static WebDriver driver;
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         desp = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         lb1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         avg_rate = new javax.swing.JLabel();
         num_view = new javax.swing.JLabel();
         hyp = new javax.swing.JLabel();
         panels = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jLabel10 = new javax.swing.JLabel();
-        rb1 = new javax.swing.JRadioButton();
-        rb2 = new javax.swing.JRadioButton();
+        p1 = new javax.swing.JPanel();
         rb3 = new javax.swing.JRadioButton();
         rb4 = new javax.swing.JRadioButton();
         rb5 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jCheckBox3 = new javax.swing.JCheckBox();
+        jButton2 = new javax.swing.JButton();
         jCheckBox4 = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
+        jButton3 = new javax.swing.JButton();
         rb6 = new javax.swing.JRadioButton();
         rb7 = new javax.swing.JRadioButton();
         rb8 = new javax.swing.JRadioButton();
         rb9 = new javax.swing.JRadioButton();
         rb10 = new javax.swing.JRadioButton();
         jButton4 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jLabel10 = new javax.swing.JLabel();
+        rb1 = new javax.swing.JRadioButton();
+        rb2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -99,17 +104,6 @@ private static WebDriver driver;
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel12.setText("BOOK THE TICKETS");
-
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setText("GO");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setText("AVERAGE RATINGS");
 
@@ -120,14 +114,6 @@ private static WebDriver driver;
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("SHORT DESCRIPTION");
-
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton3.setText("ADD TO WATCHLIST");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         avg_rate.setText("jLabel13");
 
@@ -148,37 +134,6 @@ private static WebDriver driver;
         });
 
         panels.setLayout(new java.awt.GridBagLayout());
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel11.setText("RECOMMEND YOUR FRIENDS");
-
-        buttonGroup3.add(jCheckBox5);
-        jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jCheckBox5.setText("YES");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
-            }
-        });
-
-        buttonGroup3.add(jCheckBox6);
-        jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jCheckBox6.setText("NOT NOW");
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel10.setText("RATE THE MOVIE");
-
-        rb1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                rb1MouseEntered(evt);
-            }
-        });
-
-        rb2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                rb2MouseEntered(evt);
-            }
-        });
 
         rb3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -207,9 +162,20 @@ private static WebDriver driver;
             }
         });
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setText("BOOK THE TICKETS");
+
         buttonGroup2.add(jCheckBox3);
         jCheckBox3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox3.setText("YES");
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setText("GO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         buttonGroup2.add(jCheckBox4);
         jCheckBox4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -228,6 +194,14 @@ private static WebDriver driver;
         buttonGroup1.add(jCheckBox2);
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBox2.setText("NO");
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setText("ADD TO WATCHLIST");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         rb6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -275,12 +249,172 @@ private static WebDriver driver;
         });
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton4.setText("forward");
+        jButton4.setText("Open Watchlist");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setText("RECOMMEND YOUR FRIENDS");
+
+        buttonGroup3.add(jCheckBox5);
+        jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jCheckBox5.setText("YES");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup3.add(jCheckBox6);
+        jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jCheckBox6.setText("NOT NOW");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setText("RATE THE MOVIE");
+
+        rb1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb1MouseEntered(evt);
+            }
+        });
+
+        rb2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                rb2MouseEntered(evt);
+            }
+        });
+
+        javax.swing.GroupLayout p1Layout = new javax.swing.GroupLayout(p1);
+        p1.setLayout(p1Layout);
+        p1Layout.setHorizontalGroup(
+            p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p1Layout.createSequentialGroup()
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(78, 78, 78)
+                        .addComponent(jCheckBox1)
+                        .addGap(90, 90, 90)
+                        .addComponent(jCheckBox2))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(19, 19, 19)
+                        .addComponent(jCheckBox5)
+                        .addGap(113, 113, 113)
+                        .addComponent(jCheckBox6))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton2)
+                        .addGap(109, 109, 109)
+                        .addComponent(jButton3)
+                        .addGap(104, 104, 104)
+                        .addComponent(jButton4))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(p1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(44, 44, 44)
+                                .addComponent(jCheckBox3))
+                            .addGroup(p1Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(81, 81, 81)
+                                .addComponent(rb1)
+                                .addGap(2, 2, 2)
+                                .addComponent(rb2)
+                                .addGap(2, 2, 2)
+                                .addComponent(rb3)
+                                .addGap(2, 2, 2)
+                                .addComponent(rb4)
+                                .addGap(2, 2, 2)
+                                .addComponent(rb5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(rb6)))
+                        .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(p1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rb7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rb8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rb9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rb10)
+                                .addGap(43, 43, 43)
+                                .addComponent(jButton1))
+                            .addGroup(p1Layout.createSequentialGroup()
+                                .addGap(98, 98, 98)
+                                .addComponent(jCheckBox4)))))
+                .addGap(0, 448, Short.MAX_VALUE))
+        );
+        p1Layout.setVerticalGroup(
+            p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p1Layout.createSequentialGroup()
+                .addContainerGap(52, Short.MAX_VALUE)
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel8))
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2))
+                .addGap(7, 7, 7)
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jCheckBox3))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jCheckBox4)))
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel10))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(rb1))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(rb2))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(rb3))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(rb4))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(rb5))
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rb7)
+                            .addComponent(rb6)
+                            .addComponent(rb8)
+                            .addComponent(rb9)
+                            .addComponent(rb10)
+                            .addComponent(jButton1))))
+                .addGap(14, 14, 14)
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel11))
+                    .addComponent(jCheckBox5)
+                    .addComponent(jCheckBox6))
+                .addGap(28, 28, 28)
+                .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel12))
+                    .addComponent(jButton2)
+                    .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3)
+                        .addComponent(jButton4)))
+                .addGap(45, 45, 45))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -308,70 +442,16 @@ private static WebDriver driver;
                                         .addComponent(num_view, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(desp, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel8)
-                        .addGap(78, 78, 78)
-                        .addComponent(jCheckBox1)
-                        .addGap(90, 90, 90)
-                        .addComponent(jCheckBox2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel11)
-                        .addGap(19, 19, 19)
-                        .addComponent(jCheckBox5)
-                        .addGap(113, 113, 113)
-                        .addComponent(jCheckBox6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel12)
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton2)
-                        .addGap(109, 109, 109)
-                        .addComponent(jButton3)
-                        .addGap(104, 104, 104)
-                        .addComponent(jButton4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(44, 44, 44)
-                                .addComponent(jCheckBox3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(81, 81, 81)
-                                .addComponent(rb1)
-                                .addGap(2, 2, 2)
-                                .addComponent(rb2)
-                                .addGap(2, 2, 2)
-                                .addComponent(rb3)
-                                .addGap(2, 2, 2)
-                                .addComponent(rb4)
-                                .addGap(2, 2, 2)
-                                .addComponent(rb5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rb6)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(jCheckBox4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rb7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rb8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rb9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rb10)
-                                .addGap(43, 43, 43)
-                                .addComponent(jButton1)))))
+                        .addComponent(jLabel7)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(desp, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(p1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(195, 195, 195))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,66 +476,9 @@ private static WebDriver driver;
                 .addComponent(jLabel7)
                 .addGap(11, 11, 11)
                 .addComponent(desp, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel8))
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2))
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jCheckBox3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jCheckBox4)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel10))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(rb1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(rb2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(rb3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(rb4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(rb5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rb7)
-                            .addComponent(rb6)
-                            .addComponent(rb8)
-                            .addComponent(rb9)
-                            .addComponent(rb10)
-                            .addComponent(jButton1))))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel11))
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel12))
-                    .addComponent(jButton2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton3)
-                        .addComponent(jButton4))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -811,6 +834,7 @@ this.setVisible(false);
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lb1;
     private javax.swing.JLabel num_view;
+    private javax.swing.JPanel p1;
     private javax.swing.JPanel panels;
     private javax.swing.JRadioButton rb1;
     private javax.swing.JRadioButton rb10;

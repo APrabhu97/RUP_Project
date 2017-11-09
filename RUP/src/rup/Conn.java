@@ -21,7 +21,7 @@ public class Conn {
                 try{          //Connection Code 
                     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
                     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rup_project?zeroDateTimeBehavior=convertToNull",
-                                                     "root","1234");  
+                                                     "root","robin");  
                     int t;
                     return conn;
                 }
